@@ -1,0 +1,9 @@
+services:
+  simple-app:
+    image: simple-app:latest
+    environment:
+      - MY_BACKEND_API_KEY="s3cr3t"
+      - MY_BACKEND_ENDPOINT="http://test.backend"
+      - NAME="Website"
+    ports:
+      - "5000:5000"
