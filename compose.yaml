@@ -2,8 +2,8 @@ services:
   simple-app:
     image: simple-app:latest
     environment:
-      - MY_BACKEND_API_KEY="s3cr3t"
+      - MY_BACKEND_V2_API_KEY="s3cr3t2"
       - MY_BACKEND_ENDPOINT="http://test.backend"
-      - NAME="Website"
+      - NAME="Big Feature Website"
     ports:
       - "5000:5000"

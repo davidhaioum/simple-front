@@ -8,7 +8,7 @@ load_dotenv()
 
 # Check if required environment variables are set
 required_env_vars = [
-    'MY_BACKEND_API_KEY', 
+    'MY_BACKEND_V2_API_KEY', 
     'MY_BACKEND_ENDPOINT', 
     'NAME'
 ]
@@ -32,13 +32,13 @@ app.add_url_rule('/healthz/readiness', 'readiness', view_func=lambda: readiness(
 
 @app.route('/')
 def hello_world():
-    MY_BACKEND_API_KEY = os.getenv("MY_BACKEND_API_KEY")
+    MY_BACKEND_V2_API_KEY = os.getenv("MY_BACKEND_V2_API_KEY")
     MY_BACKEND_ENDPOINT = os.getenv("MY_BACKEND_ENDPOINT")
     NAME = os.getenv("NAME")
 
     return f"""<xmp>
-              Welcome to {NAME}
-              I will discuss with {MY_BACKEND_ENDPOINT} using api key {MY_BACKEND_API_KEY}.
+              Welcome to {NAME}. Here we made some big features changes in the code
+              I will discuss with a different backend now on {MY_BACKEND_ENDPOINT} using a new api key {MY_BACKEND_V2_API_KEY}.
               </xmp>"""
 
 if __name__ == '__main__':
